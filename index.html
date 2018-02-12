@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Javascript Animated Icons</title>
+
+    <style>
+        .iconHolder {
+            position:absolute; top:32%; width:100%; text-align:center;
+        }
+        .icon {
+            font-size:220px; color:green; text-align:center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="iconHolder">
+        <span id="battery" class="fa icon"></span>
+    </div><!--  //iconHolder -->
+
+    <script>
+
+        // Battery Charge Animation
+        function chargeBattery() {
+            var battery = document.getElementById('battery');
+            battery.innerHTML = "&#xf244;";
+            setTimeout(function () {
+               battery.innerHTML =  "&#xf243;";
+            }, 1000);
+            setTimeout(function () {
+                battery.innerHTML =  "&#xf242;";
+            }, 2000);
+            setTimeout(function () {
+                battery.innerHTML =  "&#xf241;";
+            }, 3000);
+            setTimeout(function () {
+                battery.innerHTML =  "&#xf240;";
+            }, 4000);
+        }
+
+        // Run Animation
+        chargeBattery()
+
+        // Run animation every 5 seconds
+        setInterval(chargeBattery, 5000);
+
+    </script>
+
+</body>
+</html>
